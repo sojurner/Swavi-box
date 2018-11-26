@@ -3,7 +3,6 @@
   <p class="routes">
     <router-link v-for="route in routes" :to="route.category" class="route"><i :class="route.icon"/> {{route.category.toUpperCase()}}</router-link>
   </p>
-  
   </nav>
 </template>
 
