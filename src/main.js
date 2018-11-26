@@ -1,59 +1,53 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import App from './App.vue';
-import Characters from './components/ContentType/Characters';
-import Planets from './components/ContentType/Planets';
-import Vehicles from './components/ContentType/Vehicles';
-import Starships from './components/ContentType/Starships';
-import Films from './components/ContentType/Films';
-import Species from './components/ContentType/Species';
+import films from './components/Films';
+import ContentType from './components/ContentType/ContentType.vue';
 
 Vue.use(VueRouter);
 Vue.config.productionTip = false;
 
 const routes = [
   {
-    component: Films,
+    component: films,
     name: 'films',
     path: '/films'
-    // children: [
-    //   {
-    //     path: '',
-    //     component: FilmDetails
-    //   }
-    // ]
   },
   {
-    component: Characters,
-    name: 'characters',
+    component: ContentType,
+    name: 'content',
     path: '/people'
     // children: [{ path: '', component: CharacterDetails }]
   },
   {
-    component: Vehicles,
-    name: 'vehicles',
+    component: ContentType,
+    name: 'content',
+
     path: '/vehicles'
     // children: [{ path: '', component: VehicleDetails }]
   },
   {
-    component: Planets,
+    component: ContentType,
+    name: 'content',
     path: '/planets'
     // children: [{ path: '', component: PlanetDetails }]
   },
   {
-    component: Starships,
+    component: ContentType,
+    name: 'content',
     path: '/starships'
     // children: [{ path: '', component: StarshipDetails }]
   },
   {
-    component: Species,
+    component: ContentType,
+    name: 'content',
     path: '/species'
     // children: [{ path: '', SpeciesDetails }]
   }
 ];
 
 const router = new VueRouter({
-  mode: 'history',
+  // mode: 'history',
   base: __dirname,
   routes
 });
