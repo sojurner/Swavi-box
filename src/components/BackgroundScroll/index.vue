@@ -30,7 +30,6 @@ export default {
   created() {
     this.$root.$on('filmCrawl', film => {
       this.filmInfo = film;
-      console.log(this.filmInfo);
     });
   }
 };
