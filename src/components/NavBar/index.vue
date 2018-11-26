@@ -1,5 +1,5 @@
 <template>
-<nav class="Nav-Bar">
+<nav class="nav-bar">
   <p class="routes">
     <router-link v-for="route in routes" :to="route.category" class="route"><i :class="route.icon"/> {{route.category.toUpperCase()}}</router-link>
   </p>
@@ -25,13 +25,47 @@ export default {
 </script>
 
 <style scoped>
+.nav-bar {
+  grid-row: 1 / 4;
+  grid-column: 1 / 2;
+  display: flex;
+  height: 100vh;
+  background-color: rgba(52, 69, 91, 0.488);
+  border-right: 2px solid rgb(84, 84, 123);
+}
+
 .routes {
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  text-align: left;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  margin-top: 6rem;
+  width: 100%;
+}
+
+.route:hover {
+  border-left: 3px solid;
+  background: rgb(117, 116, 116);
+  /* box-shadow: 1.5px 1.5px 1.5px #ccc; */
+}
+
+.route {
+  color: #dcc67d;
+  margin: 0.1rem 0;
+  padding: 0.5rem;
+  text-decoration-line: none;
+}
+
+i {
+  padding-left: 0.4rem;
 }
 
 .router-link-exact-active {
-  color: rgb(65, 129, 167);
+  color: rgb(116, 116, 145);
+}
+
+.router-link-exact-active:hover {
+  background-color: rgb(84, 84, 123);
 }
 </style>
