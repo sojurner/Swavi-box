@@ -1,4 +1,5 @@
-# swavi-box
+# Swavi-box
+First project in Vue...its so much better than React
 
 ## Project setup
 ```
