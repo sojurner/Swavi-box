@@ -2,7 +2,7 @@
 <div class="home-page">
   <h1 class='title'>Swavi-Box</h1>
   <BackgroundScroll></BackgroundScroll>
-  <router-view></router-view>
+  <router-view v-if="!loading" :data="$data[$route.path.slice(1)]" :path="$route.path.slice(1)"></router-view>
   <i @click="toggleNav" :class="icon_class"></i>
   <NavBar v-if="displayNav"></NavBar>
 </div>
@@ -11,13 +11,20 @@
 <script>
 import NavBar from '../NavBar';
 import BackgroundScroll from '../BackgroundScroll';
+import { getData } from '../../utilities/apiCalls.js';
 
 export default {
   name: 'Home',
   data() {
     return {
       icon_class: 'fas fa-stream',
-      displayNav: false
+      displayNav: false,
+      planets: null,
+      species: null,
+      people: null,
+      vehicles: null,
+      starships: null,
+      loading: true
     };
   },
 
@@ -35,6 +42,29 @@ export default {
         this.icon_class = 'fas fa-stream';
       }
     }
+  },
+
+  async mounted() {
+    const categoryTypes = [
+      'species',
+      'planets',
+      'people',
+      'vehicles',
+      'starships'
+    ];
+    categoryTypes.forEach(async category => {
+      const result = await getData(category);
+      this[category] = result;
+      if (
+        this.species &&
+        this.vehicles &&
+        this.people &&
+        this.planets &&
+        this.starships
+      ) {
+        this.loading = false;
+      }
+    });
   }
 };
 </script>
