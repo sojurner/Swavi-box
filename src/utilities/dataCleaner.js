@@ -15,3 +15,41 @@ export const filmScrape = film => {
   };
   return modifiedObj;
 };
+
+export const characterScrape = character => {
+  const { name, height, mass, gender } = character;
+  const modifiedObj = {
+    name,
+    height,
+    mass,
+    gender,
+    'eye color': character.eye_color,
+    'skin color': character.skin_color
+  };
+
+  return modifiedObj;
+};
+
+export const speciesScrape = species => {
+  const {
+    name,
+    designation,
+    language,
+    classification,
+    average_height,
+    average_lifespan,
+    eye_colors,
+    skin_colors
+  } = species;
+
+  return {
+    name,
+    designation,
+    language,
+    classification,
+    'average height': average_height,
+    'average lifespan': average_lifespan,
+    'eye colors': eye_colors,
+    'skin colors': skin_colors
+  };
+};
