@@ -1,6 +1,6 @@
 <template>
 <div class="home-page">
-  <p>Swavi-Box</p>
+  <h1 class='title'>Swavi-Box</h1>
   <BackgroundScroll></BackgroundScroll>
   <router-view></router-view>
   <i @click="toggleNav" :class="icon_class"></i>
@@ -30,7 +30,7 @@ export default {
     toggleNav() {
       this.displayNav = !this.displayNav;
       if (this.displayNav) {
-        this.icon_class = 'far fa-times-circle';
+        this.icon_class = 'fas fa-chevron-circle-left';
       } else {
         this.icon_class = 'fas fa-stream';
       }
@@ -42,7 +42,45 @@ export default {
 <style scoped>
 .home-page {
   display: grid;
-  grid-template-columns: 10rem 1fr;
+  grid-template-columns: 12rem 1fr;
   grid-template-rows: 1fr 3fr 1fr;
+  height: 100vh;
+}
+
+.title {
+  font-family: jedi;
+  grid-column: 2 / 3;
+  color: rgb(143, 114, 75);
+}
+
+i {
+  cursor: pointer;
+}
+
+.fa-stream,
+.fa-chevron-circle-left {
+  color: bisque;
+  font-size: 1.5rem;
+  position: absolute;
+  left: 1.5rem;
+  top: 1.5rem;
+}
+
+.fa-chevron-circle-left {
+  left: 10.2rem;
+  color: rgb(115, 115, 179);
+}
+
+.fa-stream:hover {
+  color: rgb(154, 103, 28);
+}
+
+.fa-chevron-circle-left:hover {
+  color: rgb(87, 87, 177);
+}
+
+@font-face {
+  font-family: jedi;
+  src: url('../../assets/fonts/STJEDISE.TTF');
 }
 </style>
