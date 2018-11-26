@@ -1,12 +1,12 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import App from './App.vue';
-import Characters from './components/ContentType/Characters.vue';
-import Planets from './components/ContentType/Planets.vue';
-import Vehicles from './components/ContentType/Vehicles.vue';
-import Starships from './components/ContentType/Starships.vue';
-import Films from './components/ContentType/Films.vue';
-import Species from './components/ContentType/Species.vue';
+import Characters from './components/ContentType/Characters';
+import Planets from './components/ContentType/Planets';
+import Vehicles from './components/ContentType/Vehicles';
+import Starships from './components/ContentType/Starships';
+import Films from './components/ContentType/Films';
+import Species from './components/ContentType/Species';
 
 Vue.use(VueRouter);
 Vue.config.productionTip = false;
