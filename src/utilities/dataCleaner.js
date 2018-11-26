@@ -53,3 +53,92 @@ export const speciesScrape = species => {
     'skin colors': skin_colors
   };
 };
+
+export const planetScrape = planet => {
+  const {
+    name,
+    terrain,
+    surface_water,
+    population,
+    diameter,
+    climate,
+    rotation_period,
+    orbital_period,
+    gravity
+  } = planet;
+  return {
+    name,
+    terrain,
+    population,
+    diameter,
+    climate,
+    gravity,
+    rotation: rotation_period,
+    orbital: orbital_period,
+    'surface water': surface_water
+  };
+};
+
+export const starshipScrape = ship => {
+  const {
+    name,
+    model,
+    manufacturer,
+    cost_in_credits,
+    length,
+    max_atmosphering_speed,
+    crew,
+    passengers,
+    cargo_capacity,
+    consumables,
+    hyperdrive_rating,
+    MGLT,
+    starship_class
+  } = ship;
+
+  return {
+    name,
+    model,
+    manufacturer,
+    cost: cost_in_credits,
+    length,
+    'max atmosphering speed': max_atmosphering_speed,
+    crew,
+    passengers,
+    'cargo capacity': cargo_capacity,
+    consumables,
+    'hyperdrive rating': hyperdrive_rating,
+    MGLT,
+    'starship class': starship_class
+  };
+};
+
+export const vehicleScrape = vehicle => {
+  const {
+    name,
+    model,
+    manufacturer,
+    cost_in_credits,
+    length,
+    max_atmosphering_speed,
+    crew,
+    passengers,
+    cargo_capacity,
+    consumables,
+    vehicle_class
+  } = vehicle;
+
+  return {
+    name,
+    model,
+    manufacturer,
+    cost: cost_in_credits,
+    length,
+    'max atmosphering speed': max_atmosphering_speed,
+    crew,
+    passengers,
+    'cargo capacity': cargo_capacity,
+    consumables,
+    'vehicle class': vehicle_class
+  };
+};
