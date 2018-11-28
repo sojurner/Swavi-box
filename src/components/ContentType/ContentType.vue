@@ -1,33 +1,21 @@
 <template>
   <table>
-  <div></div>
+    <div></div>
     <tbody>
-      <tr class=table-headers>
-        <th v-for="key in keys" class="table-header">{{key.toUpperCase()}}</th>
-        </tr>
+      <tr class="table-headers">
+        <th v-for="key in Object.keys(data[0])" class="table-header">{{key.toUpperCase()}}</th>
+      </tr>
       <tr v-for="item in data">
-        <td v-for="key in keys">{{item[key]}}</td>
+        <td v-for="key in Object.keys(data[0])">{{item[key]}}</td>
       </tr>
     </tbody>
   </table>
-
 </template>
 
 <script>
 export default {
-  props: ['data', 'path'],
-  name: 'content',
-  data() {
-    return {
-      keys: Object.keys(this.$props.data[0])
-    };
-  },
-
-  beforeUpdate() {
-    if (this.keys !== Object.keys(this.$props.data[0])) {
-      this.keys = Object.keys(this.$props.data[0]);
-    }
-  }
+  props: ["data", "headers"],
+  name: "contentType"
 };
 </script>
 
