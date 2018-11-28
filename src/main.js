@@ -15,32 +15,32 @@ const routes = [
   },
   {
     component: ContentType,
-    name: 'content',
+    name: 'contentType',
     path: '/people'
     // children: [{ path: '', component: CharacterDetails }]
   },
   {
     component: ContentType,
-    name: 'content',
+    name: 'contentType',
 
     path: '/vehicles'
     // children: [{ path: '', component: VehicleDetails }]
   },
   {
     component: ContentType,
-    name: 'content',
+    name: 'contentType',
     path: '/planets'
     // children: [{ path: '', component: PlanetDetails }]
   },
   {
     component: ContentType,
-    name: 'content',
+    name: 'contentType',
     path: '/starships'
     // children: [{ path: '', component: StarshipDetails }]
   },
   {
     component: ContentType,
-    name: 'content',
+    name: 'contentType',
     path: '/species'
     // children: [{ path: '', SpeciesDetails }]
   }
