@@ -2,7 +2,7 @@
   <div class="home-page">
     <h1 class="title">Swavi-Box</h1>
     <BackgroundScroll></BackgroundScroll>
-    <router-view v-if="!loading" :data="$data[$route.path.slice(1)]" :path="$route.path.slice(1)"></router-view>
+    <router-view v-if="!loading" :info="$data[$route.path.slice(1)]" :path="$route.path.slice(1)"></router-view>
     <i @click="toggleNav" :class="icon_class"></i>
     <NavBar v-if="displayNav"></NavBar>
   </div>
@@ -78,9 +78,11 @@ export default {
 }
 
 .title {
+  font-size: 3.5rem;
   font-family: jedi;
   grid-column: 2 / 3;
   color: rgb(143, 114, 75);
+  margin: 0 0 1rem 0;
 }
 
 i {
