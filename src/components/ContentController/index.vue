@@ -27,7 +27,6 @@ export default {
   },
   mounted() {
     this.$root.$on("toggleCard", () => {
-      console.log("called");
       this.showCard = false;
     });
   }

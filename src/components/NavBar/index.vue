@@ -1,25 +1,35 @@
 <template>
-<nav class="nav-bar">
-  <p class="routes">
-    <router-link v-for="route in routes" :to="route.category" class="route"><i :class="route.icon"/> {{route.category.toUpperCase()}}</router-link>
-  </p>
+  <nav class="nav-bar">
+    <p class="routes">
+      <router-link v-for="route in routes" :to="route.category" class="route">
+        <nav @click="toggleCard">
+          <i :class="route.icon"/>
+          {{route.category.toUpperCase()}}
+        </nav>
+      </router-link>
+    </p>
   </nav>
 </template>
 
 <script>
 export default {
-  name: 'NavBar',
+  name: "NavBar",
   data() {
     return {
       routes: [
-        { category: 'films', icon: 'fas fa-film' },
-        { category: 'people', icon: 'fas fa-user-astronaut' },
-        { category: 'species', icon: 'fab fa-jedi-order' },
-        { category: 'starships', icon: 'fab fa-galactic-senate' },
-        { category: 'vehicles', icon: 'fab fa-old-republic' },
-        { category: 'planets', icon: 'fas fa-globe' }
+        { category: "films", icon: "fas fa-film" },
+        { category: "people", icon: "fas fa-user-astronaut" },
+        { category: "species", icon: "fab fa-jedi-order" },
+        { category: "starships", icon: "fab fa-galactic-senate" },
+        { category: "vehicles", icon: "fab fa-old-republic" },
+        { category: "planets", icon: "fas fa-globe" }
       ]
     };
+  },
+  methods: {
+    toggleCard() {
+      this.$root.$emit("toggleCard");
+    }
   }
 };
 </script>
