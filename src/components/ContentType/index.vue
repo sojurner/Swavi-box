@@ -50,22 +50,21 @@ tbody {
   justify-self: start;
 }
 
-tr {
-  cursor: pointer;
+td {
+  padding: 0.2rem 1rem;
 }
 
 tr {
-  color: #5c6a7b;
+  cursor: pointer;
+  color: #748394;
   font-size: 1.4rem;
+  padding: 1rem;
   background-color: #2d3846;
 }
 
 tr:hover {
   color: rgb(181, 181, 141);
   background-color: #374f55;
-}
-
-tr:nth-child(odd) {
 }
 
 tr:nth-child(1) {
