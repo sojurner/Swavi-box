@@ -2,7 +2,7 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import App from './App.vue';
 import films from './components/Films';
-import ContentType from './components/ContentType/ContentType.vue';
+import ContentController from './components/ContentController/';
 
 Vue.use(VueRouter);
 Vue.config.productionTip = false;
@@ -14,33 +14,33 @@ const routes = [
     path: '/films'
   },
   {
-    component: ContentType,
-    name: 'contentType',
+    component: ContentController,
+    name: 'ContentController',
     path: '/people'
     // children: [{ path: '', component: CharacterDetails }]
   },
   {
-    component: ContentType,
-    name: 'contentType',
+    component: ContentController,
+    name: 'ContentController',
 
     path: '/vehicles'
     // children: [{ path: '', component: VehicleDetails }]
   },
   {
-    component: ContentType,
-    name: 'contentType',
+    component: ContentController,
+    name: 'ContentController',
     path: '/planets'
     // children: [{ path: '', component: PlanetDetails }]
   },
   {
-    component: ContentType,
-    name: 'contentType',
+    component: ContentController,
+    name: 'ContentController',
     path: '/starships'
     // children: [{ path: '', component: StarshipDetails }]
   },
   {
-    component: ContentType,
-    name: 'contentType',
+    component: ContentController,
+    name: 'ContentController',
     path: '/species'
     // children: [{ path: '', SpeciesDetails }]
   }
