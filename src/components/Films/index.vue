@@ -1,16 +1,16 @@
 <template>
   <div class="film-container">
     <p v-for="film in films">
-    <span class="film-episode">Ep. {{film.episode}} :</span>
-    <span @click="selectFilm(film)" class="film-title">  {{film.title}}</span>
+      <span class="film-episode">Ep. {{film.episode}} :</span>
+      <span @click="selectFilm(film)" class="film-title">{{film.title}}</span>
     </p>
   </div>
 </template>
 
 <script>
-import { filmScrape } from '../../utilities/dataCleaner.js';
+import { filmScrape } from "../../utilities/dataCleaner.js";
 export default {
-  name: 'films',
+  name: "films",
   data() {
     return {
       films: null,
@@ -19,11 +19,11 @@ export default {
   },
   methods: {
     selectFilm(film) {
-      this.$root.$emit('filmCrawl', film);
+      this.$root.$emit("filmCrawl", film);
     }
   },
   async mounted() {
-    const response = await fetch('https://swapi.co/api/films');
+    const response = await fetch("https://swapi.co/api/films");
     const result = await response.json();
     const modifiedFilms = result.results
       .map(film => {
@@ -47,5 +47,9 @@ export default {
 }
 .film-title {
   color: rgb(215, 199, 179);
+  cursor: pointer;
+}
+.film-title:hover {
+  color: aliceblue;
 }
 </style>

@@ -25,13 +25,18 @@ export default {
   flex-direction: column;
   justify-content: space-evenly;
   font-size: 1.5rem;
+  background-color: rgba(65, 65, 65, 0.893);
+  padding: 0 8rem;
+  border-radius: 0.5rem;
 }
 
 .values {
-  color: rgb(250, 250, 229);
+  color: rgb(237, 237, 210);
+  font-size: 2rem;
 }
 
 .property {
-  color: rgb(186, 186, 186);
+  color: rgb(169, 169, 169);
+  margin-right: 2rem;
 }
 </style>
