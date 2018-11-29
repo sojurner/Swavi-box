@@ -1,30 +1,23 @@
 # Swavi-box
-First project in Vue...its so much better than React
+Explore the Star wars universe and Vue some stars
 
-## Project setup
-```
-npm install
-```
+[Live](https://swavi-box.netlify.com)
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+### Technologies
+- VueJS
+- Jest 
 
-### Compiles and minifies for production
-```
-npm run build
-```
 
-### Run your tests
-```
-npm run test
-```
+### Setup
+###### Install dependencies `npm install`
 
-### Lints and fixes files
-```
-npm run lint
-```
+###### Compiles and hot-reloads for development `npm start`
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+###### Compiles and minifies for production `npm run build`
+
+
+###### Run your tests `npm test`
+
+### Lints and fixes files`npm run lint`
+
+####
