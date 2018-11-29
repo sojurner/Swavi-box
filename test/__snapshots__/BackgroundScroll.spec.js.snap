@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BackgroundScroll defaults to a 1`] = `"<div class=\\"Background__Container\\"><div class=\\"Background__Fade\\"></div> <section class=\\"Background__Scroll\\"><div class=\\"Background__Crawl\\"><div class=\\"Background__Title\\"><p>Episode Vue</p> <h1>&lt;--Click On Films</h1></div> <p>To view the Opening Crawl for a film</p> <p>2018-11-25 Paul Kim</p></div></section></div>"`;
