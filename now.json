@@ -1,0 +1,28 @@
+{
+  "version": 2,
+  "name": "swavi-box",
+  "builds": [{ "src": "dist/**", "use": "@now/static" }],
+  "routes": [
+    {
+      "src": "^/js/(.*)",
+      "dest": "/dist/js/$1",
+      "headers": { "Content-Type": "application/javascript" }
+    },
+    {
+      "src": "^/css/(.*)",
+      "dest": "/dist/css/$1",
+      "headers": { "Content-Type": "text/css" }
+    },
+    {
+      "src": "^/img/icons/(.*)",
+      "dest": "/dist/img/icons/$1",
+      "headers": { "Content-Type": "image/png" }
+    },
+    {
+      "src": "^/img/(.*)",
+      "dest": "/dist/img/$1",
+      "headers": { "Content-Type": "image/png" }
+    },
+    { "src": "/.*", "dest": "/dist/index.html" }
+  ]
+}
