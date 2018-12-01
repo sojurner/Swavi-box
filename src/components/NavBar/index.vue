@@ -27,7 +27,7 @@ export default {
     };
   },
   methods: {
-    toggleCard() {
+    toggleCard($event) {
       this.$root.$emit("toggleCard");
     }
   }
@@ -36,6 +36,7 @@ export default {
 
 <style scoped>
 .nav-bar {
+  position: fixed;
   grid-row: 1 / 4;
   grid-column: 1 / 2;
   display: flex;
