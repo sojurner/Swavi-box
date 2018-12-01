@@ -19,12 +19,14 @@
 <script>
 export default {
   name: "ContentType",
-  props: ["headers"],
+  props: ["headers", "type"],
   data() {
     return {
-      activeRow: ""
+      activeRow: "",
+      inputValue: ""
     };
   },
+
   methods: {
     selectCard(name) {
       this.$emit("selectedCard", name);
