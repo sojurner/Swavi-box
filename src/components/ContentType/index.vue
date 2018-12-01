@@ -41,6 +41,10 @@ export default {
       }
     }
   },
+
+  computed: {
+    setData() {
+      return this.searchList();
     }
   }
 };
