@@ -1,7 +1,7 @@
 <template>
   <div class="controller">
-    <ContentType @selectedCard="selectCard" :headers="info.map(item => {return {name: item.name}})"></ContentType>
-    <ContentCard v-if="showCard" :content="selectedItem"></ContentCard>
+    <ContentType @selectedCard="selectCard" :type="path" :headers="toggle"></ContentType>
+    <ContentCard v-if="showCard" :content="selectedItem" :info="info"></ContentCard>
   </div>
 </template>
 
@@ -11,7 +11,7 @@ import ContentType from "../ContentType";
 
 export default {
   name: "ContentController",
-  props: ["info"],
+  props: ["info", "path"],
   data() {
     return {
       selectedItem: null,
@@ -23,6 +23,11 @@ export default {
     selectCard(name) {
       this.selectedItem = this.$props.info.find(item => item.name === name);
       this.showCard = true;
+    }
+  },
+  computed: {
+    toggle() {
+      return this.$props.info;
     }
   },
   mounted() {
