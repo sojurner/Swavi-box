@@ -1,19 +1,29 @@
 <template>
+  <div>
+    <h2 class="type-title">{{type.toUpperCase()}}</h2>
   <table>
     <tbody>
       <tr class="table-headers">
-        <th class="table-header">NAME</th>
+          <input
+            class="type-search"
+            :value="inputValue"
+            type="text"
+            placeholder="Search"
+            @input="inputValue = $event.target.value"
+            @keyup="searchList"
+          >
       </tr>
       <tr
         class="table-data"
-        v-for="item in headers"
-        :class="{'table-data-active': (activeRow===item.name)}"
+          v-for="item in setData"
+          :class="{'table-data-active': (activeRow === item.name)}"
         @click="selectCard(item.name)"
       >
         <td>{{item.name}}</td>
       </tr>
     </tbody>
   </table>
+  </div>
 </template>
 
 <script>
