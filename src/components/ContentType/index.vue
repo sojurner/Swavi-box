@@ -43,13 +43,13 @@ export default {
       this.activeRow = name;
     },
     searchList() {
-      if (this.inputValue.length < 2) {
-        return this.$props.headers;
+      const { headers } = this.$props;
+      if (this.inputValue.length < 1) {
+        return headers;
       } else {
-        const filtered = this.$props.headers.filter(item =>
+        return headers.filter(item =>
           item.name.toLowerCase().includes(this.inputValue)
         );
-        return filtered;
       }
     }
   },

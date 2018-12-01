@@ -27,7 +27,7 @@ export default {
     };
   },
   methods: {
-    toggleCard($event) {
+    toggleCard() {
       this.$root.$emit("toggleCard");
     }
   }
