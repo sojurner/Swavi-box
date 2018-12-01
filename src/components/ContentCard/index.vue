@@ -1,5 +1,5 @@
 <template>
-  <div class="content-card">
+  <div class="content-cards">
     <section class="content-section" v-for="key in Object.keys(content)">
       <span class="property">{{key.toUpperCase()}} :</span>
       {{' '}}
@@ -11,12 +11,12 @@
 <script>
 export default {
   name: "ContentCard",
-  props: ["content"]
+  props: ["content", "info"]
 };
 </script>
 
 <style scoped>
-.content-card {
+.content-cards {
   grid-column: 2 / 3;
   justify-self: start;
   text-align: left;
